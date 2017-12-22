@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<button>click me</button>
+ <div style="width: 80px; height: 80px; background-color: aqua; position: relative;"></div>
+<div  style="width: 100px; height: 100px;background: aqua; position: relative;"></div>
+<h2>Using relative value</h2>
+<p>It is also possible to define relative values (the value is then relative to the element's current value). This is done by putting += or -= in front of the value:</p>
+<button class="btn">Start Animation</button>
+<div class="btn1" style="width: 50px; height: 50px; background-color: blue; position: relative;"></div>
+<h2>animation using pre-define value</h2>
+<button class="pre">Start Animate</button>
+<div id="div" style="background-color: aqua;width: 100px;height: 100px;position: relative;"></div>
+<script type="text/javascript">	
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div").animate({
+				left:'250px',
+				opacity:'0.5',
+				height:'200px',
+				width:'200px'
+			});
+		});
+		$(".btn").click(function(){
+			$("btn1").animate({
+				left:'250px',
+				opacity:'0.6',
+				height:'+=50px',
+				width:'+=50px'
+			},"slow");
+		});
+	});
+</script>
+<script type="text/javascript">
+	$("document").ready(function(){
+		$(".pre").click(function(){
+			$("#div").animate({
+				height:'toggle'
+			});
+		});
+	});
+</script>
+</body>
+</html>

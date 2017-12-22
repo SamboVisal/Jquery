@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$("#a").click(function(){
+			$("#b").slideToggle("slow");
+		});
+	});
+</script>
+	<style type="text/css">
+	#b,#a{
+		padding: 10px;
+		background-color: aqua;
+		text-align: center;
+		border: solid 1px #ffffff;
+	}	
+	#b{
+		padding: 50px;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+<div id="a">Click Me to get slide down</div>
+<div id="b">Fuck You Bitches!!!</div>
+
+</body>
+</html>

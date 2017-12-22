@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p class="enter">moue enter function()</p>
+<p class="dclick">mouse double click function()</p>
+<p class="mleave">mouse leave</p>
+<p class="mdown">mouse down</p>
+<p class="mup">mouse up</p>
+<p class="mhover">hover</p>
+<p class="mfocus"><a href="#">focus</a></p>
+<p class="hover">after hovered</p>
+<p class="mblue">blur</p>
+<h2>FOR BULR IS AFTER WE FOCUS</h2>
+<input type="text" name="fullname">
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$(".enter").mouseenter(function(){
+			alert("Mouse Enter Me !!!");
+		});
+		$(".dclick").dblclick(function(){
+			alert("Doulbe Click me");
+		});
+		$(".mleave").mouseleave(function(){
+			alert("See ya! you leave me");
+		});
+		$(".mdown").mousedown(function(){
+
+			alert("Moue Down!!!");
+			
+		});
+		$(".mup").mouseup(function(){
+			alert("Mouse up");
+		});
+		$("[href]").focus(function(){
+
+			alert("You focus me !!!");
+		});
+		$("input").focus(function(){
+			$(this).css("background-color","#ffffff");
+		});
+		$("input").blur(function(){
+			$(this).css("background-color","red");
+		});
+	});
+	$(document).ready(function(){
+		$(".mhover").hover(function(){
+			alert("you hover me");
+		},
+		function(){
+			alert("Bye!! after hover me");
+		});
+	});
+</script>
+<h3>The ON method</h3>
+<p>The on() method attaches one or more event handlers for the selected elements.</p>
+<p class="onCl">Attach a click event to a class of p</p>
+<p class="mul">Attach multiple event handler to a p element</p>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".onCl").on("click",function(){
+			$(this).hide();
+		});
+		$(".mul").on({
+			mouseenter : function(){
+				$(this).css("background-color","lightgray");
+			},
+			mouseleave: function(){
+				$(this).css("background-color","lightblue");
+			},
+			click: function(){
+				$(this).css("background-color","yellow");
+			}
+		});
+
+	});
+
+</script>
+</body>
+</html>

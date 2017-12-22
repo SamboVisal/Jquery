@@ -1,0 +1,59 @@
+<html>
+<head>
+    <style>
+        #div{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .div{
+            background-color: red;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+        }
+    </style>
+    	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    
+    <div id="div"></div>
+    <div class="div">KHEM</div>
+    <script>
+        $(document).ready(function(){
+            var d = $("#div");
+            d.click(function(){
+                $(this).animate({
+                    height:'250px',
+                    opacity:'0.8'
+                });
+                $(this).animate({
+                    width:'250px',
+                    opacity:'0.8'
+                });
+                $(this).animate({
+                    height:'120px',
+                    opacity:'0.4'
+                });
+                $(this).animate({
+                    width:'120px',
+                    opacity:'0.4'
+                });
+                
+            });
+            var dc = $(".div");
+            dc.dblclick(function(){
+                $(this).animate({
+                left:'200px',
+            },"slow");
+            $(this).animate({
+                fontSize:'1.5em'
+            });
+            $(this).css("background-color","aqua");
+            });
+        });
+    </script>
+</body>
+</html>

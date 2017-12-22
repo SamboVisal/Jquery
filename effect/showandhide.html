@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>Click show and hide</p>
+<p>Good Bye</p>
+<button class="show">show</button>
+<button class="hide">hide</button><br>
+<button class="tog">using toggle between hiding and showing paragraph</button>
+<h3>Toggle 1</h3>
+<h3>Toggle 2</h3>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".hide").click(function(){
+			$("p").hide(2000);
+		});
+		$(".show").click(function(){
+			$("p").show(1000);
+		});
+		$(".tog").click(function(){
+			$("h3").toggle(1000);
+		});
+		$(".fad").click(function(){
+			$("#div1").fadeIn();
+			$("#div2").fadeIn("slow");
+			$("#div3").fadeIn(3000);
+		});
+		$(".fado").click(function(){
+			$("#div1").fadeOut();
+			$("#div2").fadeOut("slow");
+			$("#div3").fadeOut(3000);
+		});
+		$(".togg").click(function(){
+			$("#div1").toggle();
+			$("#div2").toggle("slow");
+			$("#div3").toggle(3000);
+			$("#div4").fadeTo("slow",0.12);
+		});
+	});
+
+</script>
+<h1>Fade event</h1>
+<button class="fad">click me</button>
+<button class="fado">fadeOut</button>
+<button class="togg">toggle</button>
+<br>
+<div id="div1" style="background-color: red; width: 80px; height: 80px; display: none;"></div><br>
+<div id="div2" style="background-color: aqua; width: 80px; height: 80px; display: none;"></div> <br>
+<div id="div3" style="background-color: gray; width: 80px; height: 80px; display: none;"></div>
+<div id="div4" style="background-color: gray; width: 80px; height: 80px;"></div>
+</body>
+</html>
